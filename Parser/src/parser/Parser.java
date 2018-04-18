@@ -1,14 +1,9 @@
 package parser;
 
-import java.io.BufferedWriter;
+
 import java.io.IOException;
-import org.jsoup.*;
-import java.io.OutputStreamWriter;
 import java.io.*;
-import java.util.HashMap;
-import java.util.Map;
 import java.util.NoSuchElementException;
-import java.util.Scanner;
 import org.jsoup.Connection;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -35,7 +30,7 @@ public class Parser {
             Document document = connect.get();
 
             Elements links = document.getElementsByClass("offer-item__photo-link");
-           // Elements links = document.getElementsByClass("thumb tdnone scale1 rel detailsLink linkWithHash ").tagName("href=");
+            // Elements links = document.getElementsByClass("thumb tdnone scale1 rel detailsLink linkWithHash ").tagName("href=");
             //System.out.println(links);
             for (Element link : links) {
 
@@ -54,9 +49,7 @@ public class Parser {
                 Elements cenaOgloszenia= null;
                 
                 try {ogloszenieWczytywane = connect1.get();
-                                
-                //idOgloszenia = ;
-                
+                              
                 //photoNumber = ogloszenieWczytywane.wholeText();
                 
                 //    System.out.println(photoNumber);
@@ -78,38 +71,6 @@ public class Parser {
                 }*/
                 } catch (Exception ee) {System.out.println("Error getElements");}
                 
-             
-                //String iD = idOgloszenia.attr("data-item");
-                //String title = titleOgloszenia.text();
-                
-                /*String local = "!!!";
-                if (localOgloszenia!=null){
-                local = localOgloszenia.text();
-                }*/
-                
-                //String date = dateOgloszenia.text();
-                
-                
-                //int indexID = date.indexOf(", ID");
-                //int indexO = (date.indexOf(" o ")+9);
-                
-                //try {date = date.substring(indexO, indexID);
-                //        } catch (StringIndexOutOfBoundsException e) {System.out.println("Error date");}
-                
-                //String descr = descrOgloszenia.text();
-                //String views = viewsOgloszenia.text();
-                
-                //try {views = views.substring(11);
-                //        } catch (StringIndexOutOfBoundsException e) {System.out.println("Error views");}
-                //String price = cenaOgloszenia.text();
-                //if (price.isEmpty()) {
-                //    price = "!Error!ceny";
-                //}
-                
-                
-
-                //System.out.println(title +  " ,,, " + views+ " ,,, " + price + " ,,, "+ descr  +" ,,, " + linkWczytywany);
-                //out.println(title +  " ,,, " + views+ " ,,, " + price + " ,,, "+ descr  +" ,,, " + linkWczytywany);
             }
         }
         
