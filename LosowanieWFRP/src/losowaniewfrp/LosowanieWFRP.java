@@ -5,13 +5,11 @@ import java.util.Random;
 
 /**
  *
- * @author RF
+ * @author Sohowski
  */
 public class LosowanieWFRP {
 
-    /**
-     * @param args the command line arguments
-     */
+    
     public static void main(String[] args) {
         
         int suma = 0;
